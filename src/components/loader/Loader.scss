@@ -1,0 +1,21 @@
+.loader {
+    padding: 20px;
+    border-radius: 100vmax;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+
+    &.visible {
+        opacity: 1;
+        transition: opacity 0.3s;
+    }
+
+    .svg-loader {
+        width: 100px;
+        height: 100px;
+    }
+}

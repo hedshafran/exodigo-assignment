@@ -1,0 +1,105 @@
+$input-padding: 10px;
+
+.add-form {
+    align-self: center;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    label {
+        font-size: 1rem;
+        color: #333;
+        margin-bottom: -10px;
+        margin-left: #{$input-padding};
+    }
+
+    input {
+        width: 100%;
+        max-width: -webkit-fill-available;
+        padding: #{$input-padding};
+        font-size: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        color: #333;
+        background-color: #fff;
+    }
+
+    textarea {
+        width: 100%;
+        max-width: -webkit-fill-available;
+        padding: #{$input-padding};
+        font-size: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        color: #333;
+        background-color: #fff;
+        font-family: inherit;
+    }
+
+    .submit-button {
+        margin: 10px auto 0 auto;
+        padding: 10px 15px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+        cursor: pointer;
+
+        &:disabled {
+            background-color: #ddd;
+            color: #666;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+    }
+
+    .secondary-button {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+        border: none;
+        border-radius: 5px;
+        background-color: #666;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .success-text {
+        color: green;
+    }
+
+    .clear-button {
+        align-self: center;
+    }
+
+    .ingredients-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        max-width: inherit;
+
+        .ingredient {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            max-width: inherit;
+
+            input {
+                width: 100%;
+                padding: 10px;
+                font-size: 1rem;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                color: #333;
+                background-color: #fff;
+            }
+        }
+    }
+}

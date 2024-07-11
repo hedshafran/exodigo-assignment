@@ -13,6 +13,7 @@ const CocktailForm: React.FC = () => {
             name: '',
             thumb: '',
             glass: '',
+            alcoholic: '',
             instructions: '',
             ingredients: [{ ingredient: '', measure: '' }],
         },
@@ -22,6 +23,7 @@ const CocktailForm: React.FC = () => {
     const onSubmit = useCallback((data: CocktailFormInputs) => {
         addCocktail({
             ...data,
+            alcoholic: data.alcoholic === 'on' ? 'Alcoholic' : 'Non alcoholic',
             id: Date.now().toString()
         });
         setSuccess(true);
@@ -45,7 +47,7 @@ const CocktailForm: React.FC = () => {
 
     return (
         <main>
-            <h1>Add Cocktail</h1>
+            <h1>Add a Cocktail</h1>
             <form className="add-form" onSubmit={handleSubmit(onSubmit)}>
                 <label htmlFor="name">Name*</label>
                 <input
@@ -60,7 +62,7 @@ const CocktailForm: React.FC = () => {
                     placeholder="Upload image"
                     onChange={handleImageChange}
                 />
-                <label htmlFor="glass">Glass</label>
+                <label htmlFor="glass">Glass*</label>
                 <input
                     type="text"
                     placeholder="Glass type"
@@ -71,6 +73,13 @@ const CocktailForm: React.FC = () => {
                     placeholder="Instructions"
                     {...register('instructions', { required: true })}
                 />
+                <label className="checkbox-label">
+                    <input
+                        type="checkbox"
+                        {...register('alcoholic', { required: true })}
+                    />
+                    Is alcoholic
+                </label>
                 <h3>Ingredients</h3>
                 <div className="ingredients-container">
                     {fields.map((field, index) => (

@@ -10,7 +10,11 @@ const Recipe: FC<RecipeProps> = ({ cocktail }) => {
   return (
     <div className="recipe-container">
       <h1>{cocktail.name}</h1>
-      <img className="cocktail-image" src={cocktail.thumb} alt={cocktail.name} />
+      <div className="image-container">
+        <img className="cocktail-image" src={cocktail.thumb} alt={cocktail.name} />
+        <span className="general-info">*{cocktail.alcoholic}</span>
+        <span className="general-info">* Glass type: {cocktail.glass}</span>
+      </div>
       <h3>Ingredients</h3>
       <ul>
         {cocktail.ingredients.map(({ ingredient, measure }) => {

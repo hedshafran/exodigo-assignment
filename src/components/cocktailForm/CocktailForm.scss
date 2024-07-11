@@ -17,7 +17,14 @@ $input-padding: 10px;
         margin-left: #{$input-padding};
     }
 
-    input {
+    .checkbox-label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: 0;
+    }
+
+    input:not([type='checkbox']) {
         width: 100%;
         max-width: -webkit-fill-available;
         padding: #{$input-padding};

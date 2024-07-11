@@ -11,8 +11,20 @@
         height: 300px;
         object-fit: cover;
         border-radius: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 0;
     }
+
+    .image-container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+
+        .general-info {
+            font-size: 0.8rem;
+            color: #333;
+        }
+    }
+
     
     ul {
         list-style-type: none;

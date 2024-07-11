@@ -43,6 +43,7 @@ export function transformDrink(data: ApiTypes.Cocktail): Cocktail {
         thumb: data.strDrinkThumb,
         glass: data.strGlass,
         instructions: data.strInstructions,
+        alcoholic: data.strAlcoholic,
         ingredients: ingredients.map((ingredient, i) => ({
             ingredient,
             measure: measures[i],

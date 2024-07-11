@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { FC, useCallback } from 'react';
 import { Cocktail } from '../../services/api/types';
 import './CocktailCard.scss';
 
@@ -7,7 +7,7 @@ interface CocktailCardProps {
     onClick: (cocktail: Cocktail) => void;
 }
 
-const CocktailCard: React.FC<CocktailCardProps> = ({ cocktail, onClick }) => {
+const CocktailCard: FC<CocktailCardProps> = ({ cocktail, onClick }) => {
     const handleClick = useCallback(() => {
         onClick(cocktail);
     }, [cocktail, onClick]);

@@ -4,9 +4,13 @@ import HomeIcon from '../../assets/glasses.svg?react';
 import AddIcon from '../../assets/plus.svg?react';
 import './NavBar.scss';
 
-const Navbar: FC = () => {
+interface NavbarProps {
+  className?: string;
+}
+
+const Navbar: FC<NavbarProps> = ({ className }) => {
   return (
-    <nav className="nav-bar">
+    <nav className={`nav-bar ${className}`}>
       <Link to="/">
         <HomeIcon className="icon" />
       </Link>

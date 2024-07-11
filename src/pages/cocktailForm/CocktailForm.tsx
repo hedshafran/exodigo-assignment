@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { FC, useCallback, useState } from 'react';
 import { useFieldArray, useForm } from 'react-hook-form';
 import { useCocktails } from '../../store/CocktailsContext';
 import './CocktailForm.scss';
@@ -6,7 +6,7 @@ import { Cocktail } from '../../services/api/types';
 
 type CocktailFormInputs = Omit<Cocktail, 'id'>;
 
-const CocktailForm: React.FC = () => {
+const CocktailForm: FC = () => {
     const { addCocktail } = useCocktails();
     const { control, register, handleSubmit, reset, setValue } = useForm<CocktailFormInputs>({
         defaultValues: {

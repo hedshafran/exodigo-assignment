@@ -7,8 +7,8 @@ import { useCocktails } from '../../store/CocktailsContext';
 import { useDebouncedCallback } from '../../utils/hooks';
 import Recipe from '../../components/recipe/Recipe';
 import CloseIcon from '../../assets/close.svg?react';
-import './Home.scss';
 import Loader from '../../components/loader/Loader';
+import './Home.scss';
 
 const modalStyles = {
     content: { inset: '10%', borderRadius: '30px' },

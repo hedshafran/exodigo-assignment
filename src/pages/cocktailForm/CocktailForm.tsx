@@ -1,8 +1,8 @@
 import { FC, useCallback, useState } from 'react';
 import { useFieldArray, useForm } from 'react-hook-form';
 import { useCocktails } from '../../store/CocktailsContext';
-import './CocktailForm.scss';
 import { Cocktail } from '../../services/api/types';
+import './CocktailForm.scss';
 
 type CocktailFormInputs = Omit<Cocktail, 'id'>;
 

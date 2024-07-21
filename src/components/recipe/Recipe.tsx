@@ -12,7 +12,7 @@ const Recipe: FC<RecipeProps> = ({ cocktail }) => {
       <h1>{cocktail.name}</h1>
       <div className="image-container">
         <img className="cocktail-image" src={cocktail.thumb} alt={cocktail.name} />
-        <span className="general-info">*{cocktail.alcoholic}</span>
+        <span className="general-info">* {cocktail.alcoholic}</span>
         <span className="general-info">* Glass type: {cocktail.glass}</span>
       </div>
       <h3>Ingredients</h3>

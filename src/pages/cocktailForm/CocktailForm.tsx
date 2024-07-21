@@ -68,7 +68,7 @@ const CocktailForm: FC = () => {
                     placeholder="Glass type"
                     {...register('glass', { required: true })}
                 />
-                <label htmlFor="instructions">Instructions</label>
+                <label htmlFor="instructions">Instructions*</label>
                 <textarea
                     placeholder="Instructions"
                     {...register('instructions', { required: true })}
@@ -76,7 +76,7 @@ const CocktailForm: FC = () => {
                 <label className="checkbox-label">
                     <input
                         type="checkbox"
-                        {...register('alcoholic', { required: true })}
+                        {...register('alcoholic', { required: false })}
                     />
                     Is alcoholic
                 </label>
